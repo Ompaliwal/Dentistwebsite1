@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#031B3A] text-white pt-12 px-4 rounded-t-3xl">
       <div className="text-center text-sm text-gray-300 mb-8 max-w-xl mx-auto">
-        Flossy is your trusted dental care partner, dedicated to providing exceptional treatments with a patient-first approach.
+        Dentistry is your premier dental care destination, committed to delivering exceptional treatments with a personalized touch.
       </div>
 
       <hr className="border-gray-700 mb-8" />
@@ -24,7 +24,7 @@ const Footer = () => {
           <h4 className="font-semibold text-white mb-3">● Contact Us</h4>
           <p className="flex items-center gap-2"><MapPin size={16} /> 123 Smile Avenue, Dental City, CA</p>
           <p className="flex items-center gap-2 mt-2"><Phone size={16} /> +(1 555)-123-4567</p>
-          <p className="flex items-center gap-2 mt-2"><Mail size={16} /> contact@flossydental.com</p>
+          <p className="flex items-center gap-2 mt-2"><Mail size={16} /> contact@dentistryhub.com</p>
         </div>
 
         {/* Social */}
@@ -62,10 +62,8 @@ const Footer = () => {
 
       {/* Logo and Footer Note */}
       <div className="mt-12 text-center">
-        <h2 className="text-5xl font-bold text-white mb-4">Flossy Dental</h2>
-        <p className="text-sm text-gray-400">
-          2025 – Design & Developed by <span className="text-white font-medium">Rokin</span> – Powered by <span className="text-white font-medium">Webflow</span>
-        </p>
+        <h2 className="text-5xl font-bold text-white mb-4">Dentistry Hub</h2>
+     
       </div>
 
       <div className="py-6" />

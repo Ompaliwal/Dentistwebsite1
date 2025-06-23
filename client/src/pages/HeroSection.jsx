@@ -115,7 +115,7 @@ const HeroSection = () => {
 
           {/* Subtext */}
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            At Flossy, we believe in creating healthy, confident smiles with expert care and advanced technology.
+            At Dentistry, we combine expertise with compassion to deliver exceptional dental care using state-of-the-art technology.
           </p>
 
           {/* CTA Buttons */}
@@ -185,7 +185,7 @@ const HeroSection = () => {
             Comprehensive <span className="text-blue-500">Dental Care</span> For Every Smile
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
-            At Flossy, we offer a full range of dental treatments to keep your smile healthy, bright, and confident.
+            At Dentistry, we provide comprehensive dental services designed to maintain and enhance your oral health and confidence.
           </p>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
@@ -218,7 +218,7 @@ const HeroSection = () => {
                 Committed To Your <span className="text-blue-500">Care</span>
               </h2>
               <p className="text-gray-600 text-lg mb-6">
-                At Flossy, we believe that a healthy smile is the key to confidence and well-being.
+                At Dentistry, we understand that your smile is a reflection of your overall well-being and confidence.
                 Our expert team of dental professionals is dedicated to providing top-quality, patient-centered care
                 in a comfortable and friendly environment.
               </p>
@@ -327,7 +327,7 @@ const HeroSection = () => {
               What Our <span className="text-blue-500">Happy</span> Patients Say
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Hear from our satisfied patients about their experiences at Flossy and how our expert care has transformed their dental health.
+              Experience the difference of personalized care at Dentistry through the stories of our satisfied patients.
             </p>
           </div>
 
@@ -356,7 +356,7 @@ const HeroSection = () => {
           <div className="flex flex-col justify-start space-y-6 pl-6 md:pl-12">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
-                New To <span className="text-blue-500">Flossy</span>? Enjoy A Special <br />
+                New To <span className="text-blue-500">Dentistry</span>? Experience Excellence In <br />
                 Welcome <span className="text-blue-500">Offer</span>!
               </h2>
               <p className="text-gray-600 text-base">
@@ -391,7 +391,7 @@ const HeroSection = () => {
             Skilled <span className="text-blue-500">Hands</span>, Caring Hearts
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl">
-            At Flossy, our team of skilled and compassionate dental professionals is dedicated to providing top-quality care.
+            At Dentistry, our dedicated team of dental professionals strives to provide exceptional care in a comfortable environment.
           </p>
           <button className="mt-4 inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-xl font-medium hover:bg-blue-200 transition">
             <UserSquare className="w-5 h-5" />

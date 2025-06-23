@@ -44,7 +44,7 @@ const ContactPage = () => {
           {/* Left Info */}
           <div>
             <p className="text-gray-700 mb-4">
-              Ready for a brighter, healthier smile? Booking an appointment at Flossy is simple and hassle-free.
+              Ready for a brighter, healthier smile? Booking an appointment at Dentistry is quick and convenient.
             </p>
 
             <div className="border-t pt-4 space-y-2 text-sm text-gray-800">
@@ -68,7 +68,7 @@ const ContactPage = () => {
                   <Mail className="w-5 h-5" />
                   Email Us
                 </div>
-                <p className="text-sm text-gray-600">contact@flossydental.com</p>
+                <p className="text-sm text-gray-600">contact@dentistryhub.com</p>
               </div>
               <div className="bg-blue-50 p-4 rounded-lg flex-1">
                 <div className="flex items-center gap-2 mb-1 text-blue-500 font-semibold">

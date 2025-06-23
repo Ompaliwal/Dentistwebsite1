@@ -18,7 +18,7 @@ const Navbar = () => {
             </div>
             <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-200">
   <span className="text-xl font-bold text-gray-900 hover:text-blue-600 cursor-pointer">
-    Flossy
+    Dentistry
   </span>
 </Link>          </div>
 

@@ -47,7 +47,7 @@ const AboutUs = () => {
                             Committed To Your <span className="text-blue-500">Care</span>
                         </h2>
                         <p className="text-gray-600 text-lg mb-6">
-                            At Flossy, we believe that a healthy smile is the key to confidence and well-being.
+                            At Dentistry, we believe that exceptional oral health is fundamental to your overall well-being and self-confidence.
                             Our expert team of dental professionals is dedicated to providing top-quality, patient-centered care
                             in a comfortable and friendly environment.
                         </p>
@@ -78,7 +78,7 @@ const AboutUs = () => {
                         Skilled <span className="text-blue-500">Hands</span>, Caring Hearts
                     </h2>
                     <p className="text-gray-600 text-lg max-w-2xl">
-                        At Flossy, our team of skilled and compassionate dental professionals is dedicated to providing top-quality care.
+                        At Dentistry, our expert team combines advanced dental expertise with genuine care to deliver outstanding treatment outcomes.
                     </p>
                     <button className="mt-4 inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-xl font-medium hover:bg-blue-200 transition">
                         <UserSquare className="w-5 h-5" />
