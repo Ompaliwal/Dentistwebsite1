@@ -47,7 +47,7 @@ const reviews = [
   },
   {
     title: 'Super Friendly Staff!',
-    text: 'The whole Flossy team was welcoming and professional. I never thought going to the dentist could be enjoyable.',
+    text: 'The entire Dentistry team was welcoming and professional. Their approach made my dental visit a pleasant experience.',
     name: 'Priya Mehta',
     avatar: 'https://randomuser.me/api/portraits/women/48.jpg',
     rating: 4,
