@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, Plus, Minus } from 'lucide-react';
 import doctorImage from '../assets/faq-doctor.jpg';
 import doctorImage1 from '../assets/Doctorcontact.jpg';
@@ -47,6 +47,7 @@ const ContactPage = () => {
               Ready for a brighter, healthier smile? Booking an appointment at Dentistry is quick and convenient.
             </p>
 
+            {/* Office Hours */}
             <div className="border-t pt-4 space-y-2 text-sm text-gray-800">
               <div className="flex justify-between">
                 <span>Monday – Friday</span>
@@ -62,15 +63,16 @@ const ContactPage = () => {
               </div>
             </div>
 
-            <div className="mt-6 flex gap-4">
-              <div className="bg-blue-50 p-4 rounded-lg flex-1">
+            {/* Contact Boxes */}
+            <div className="mt-6 flex flex-col md:flex-row gap-4">
+              <div className="bg-blue-50 p-4 rounded-lg w-full">
                 <div className="flex items-center gap-2 mb-1 text-blue-500 font-semibold">
                   <Mail className="w-5 h-5" />
                   Email Us
                 </div>
                 <p className="text-sm text-gray-600">contact@dentistryhub.com</p>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg flex-1">
+              <div className="bg-blue-50 p-4 rounded-lg w-full">
                 <div className="flex items-center gap-2 mb-1 text-blue-500 font-semibold">
                   <Phone className="w-5 h-5" />
                   Call Us
@@ -80,8 +82,8 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* Right Side Image */}
-          <div className="flex justify-center pr-5 md:pr-10 mt-8 md:mt-0">
+          {/* Right Side Image (only visible on md and above) */}
+          <div className="hidden md:flex justify-center pr-5 md:pr-10 mt-8 md:mt-0">
             <img
               src={doctorImage1}
               alt="Doctor with patient"
@@ -96,7 +98,7 @@ const ContactPage = () => {
       <section className="py-16 bg-[#f8fbff]">
         <div className="container max-w-4xl mx-auto grid md:grid-cols-2 items-start gap-10">
           {/* Left Image */}
-          <div className="sticky top-10 self-start">
+          <div className="flex justify-center">
             <img
               src={doctorImage}
               alt="Doctor with patient"
@@ -118,7 +120,11 @@ const ContactPage = () => {
                 >
                   <div className="flex justify-between items-center font-medium text-gray-800">
                     <span>{faq.question}</span>
-                    {openIndex === index ? <Minus size={20} className="transition-transform duration-300 rotate-180" /> : <Plus size={20} className="transition-transform duration-300" />}
+                    {openIndex === index ? (
+                      <Minus size={20} className="transition-transform duration-300 rotate-180" />
+                    ) : (
+                      <Plus size={20} className="transition-transform duration-300" />
+                    )}
                   </div>
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out`}

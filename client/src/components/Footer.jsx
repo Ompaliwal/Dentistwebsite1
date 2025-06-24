@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#031B3A] text-white pt-12 px-4 rounded-t-3xl">
+    <footer className="bg-[#031B3A] text-white pt-12 px-4 rounded-t-3xl font-jakarta">
       <div className="text-center text-sm text-gray-300 mb-8 max-w-xl mx-auto">
         Dentistry is your premier dental care destination, committed to delivering exceptional treatments with a personalized touch.
       </div>

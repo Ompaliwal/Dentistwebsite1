@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X, Home, Users, FileText, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.webp';
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,17 +12,21 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-              </svg>
-            </div>
-            <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-200">
-  <span className="text-xl font-bold text-gray-900 hover:text-blue-600 cursor-pointer">
-    Dentistry
-  </span>
-</Link>          </div>
+<div className="flex items-center space-x-2">
+  {/* Replace SVG with your logo image */}
+  <img
+    src={logo} // <- Replace this with your actual logo path
+    alt="Dentistry Logo"
+    className="w-8 h-8 rounded-full object-cover"
+  />
+
+  <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-200">
+    <span className="text-xl font-bold text-gray-900 hover:text-blue-600 cursor-pointer">
+      Dentistry
+    </span>
+  </Link>
+</div>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

@@ -47,39 +47,33 @@ const services = [
     title: "Emergency Dental Care",
     description:
       "When emergencies happen, our team provides urgent care when you need it most.",
-    icon: <Zap size={32} className="text-black-500" />,
+    icon: <Zap size={32} className="text-blue-500" />,
   },
 ];
 
 const Services = () => {
   return (
-<section className="py-20 bg-[#f8fbff] font-jakarta">
+<section className="py-20 bg-[#f8fbff] font-jakarta services-section">
   <div className="container max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center gap-10">
-    {/* Left: Services */}
     <div className="flex-1">
       <div className="text-left mb-10">
-        <h2 className="text-4xl font-bold text-blue-500 mb-2">
-          Our Services
-        </h2>
+        <h2 className="text-4xl font-bold text-blue-500 mb-2">Our Services</h2>
         <p className="text-gray-600 text-lg max-w-md">
-          Discover a range of award-winning dental treatments tailored to
-          your smile.
+          Discover a range of award-winning dental treatments tailored to your smile.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 services-grid">
         {services.map((service, idx) => (
           <div
             key={idx}
-            className="bg-white border border-gray-200 p-5 rounded-xl shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+            className="bg-white border border-gray-200 p-5 rounded-xl shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 services-card"
           >
-            <div className="mb-3  ">{service.icon}</div>
+            <div className="mb-3">{service.icon}</div>
             <h3 className="text-lg font-semibold text-blue-500 mb-1">
               {service.title}
             </h3>
-            <p className="text-sm text-gray-600 mb-2">
-              {service.description}
-            </p>
+            <p className="text-sm text-gray-600 mb-2">{service.description}</p>
             <Link to="/contact">
               <button className="relative inline-flex items-center text-sm font-medium text-black-700 cursor-pointer group">
                 Get An Appointment
@@ -96,11 +90,12 @@ const Services = () => {
       <img
         src={aboutImage}
         alt="Dental care"
-        className="w-full max-w-md mx-auto lg:mx-0 rounded-xl shadow-md"
+        className="w-full max-w-md mx-auto lg:mx-0 rounded-xl shadow-md services-image"
       />
     </div>
   </div>
 </section>
+
   );
 };
 

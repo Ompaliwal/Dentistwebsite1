@@ -106,78 +106,89 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="bg-gray-50 py-16 text-center font-jakarta">
-        <div className="container">
-          {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
-            Creating Beautiful Smiles <br /> with <span className="text-blue-500">Expert Care</span>
-          </h1>
+<section className="bg-gray-50 py-16 text-center font-jakarta">
+  <div className="container">
+    {/* Heading */}
+    <h1 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
+      Creating Beautiful Smiles <br /> with <span className="text-blue-500">Expert Care</span>
+    </h1>
 
-          {/* Subtext */}
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            At Dentistry, we combine expertise with compassion to deliver exceptional dental care using state-of-the-art technology.
-          </p>
+    {/* Subtext */}
+    <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+      At Dentistry, we combine expertise with compassion to deliver exceptional dental care using state-of-the-art technology.
+    </p>
 
-          {/* CTA Buttons */}
-          <div className="flex gap-4 items-center justify-center flex-wrap mb-10">
-            {/* Get Started Button (Contact Page) */}
-            <Link to="/contact">
-              <button className="flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-xl font-medium shadow-md hover:bg-blue-600 transition cursor-pointer">
-                <div className="bg-white p-1.5 rounded-md">
-                  <Phone className="w-5 h-5 text-blue-500" />
-                </div>
-                Get Started
-              </button>
-            </Link>
-
-            {/* Our Services Button */}
-            <Link to="/services">
-              <button className="flex items-center gap-2 border border-blue-500 text-black px-6 py-3 rounded-xl font-medium hover:bg-blue-50 transition cursor-pointer">
-                <div className="bg-blue-500 p-1.5 rounded-md">
-                  <Package className="w-5 h-5 text-white" />
-                </div>
-                Our Services
-              </button>
-            </Link>
+    {/* CTA Buttons */}
+    <div className="flex flex-wrap flex-row justify-center items-center gap-4 mb-10">
+      {/* Get Started Button (Contact Page) */}
+      <Link to="/contact">
+        <button className="flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-xl font-medium shadow-md hover:bg-blue-600 transition cursor-pointer">
+          <div className="bg-white p-1.5 rounded-md">
+            <Phone className="w-5 h-5 text-blue-500" />
           </div>
+          Get Started
+        </button>
+      </Link>
 
-          {/* Doctor Image with Side Cards */}
-          <div className="relative flex flex-col md:flex-row items-center justify-center gap-6">
-            {/* Left Card - Contact Page */}
-            <Link to="/contact" className="w-72">
-              <div className="bg-white rounded-xl shadow-md px-6 py-4 text-left w-full flex items-center justify-between hover:shadow-lg transition">
-                <div>
-                  <h4 className="font-semibold text-gray-900">Book Appointment</h4>
-                  <p className="text-sm text-gray-500">Ready for a Healthier Smile?</p>
-                </div>
-                <div className="bg-blue-500 text-white p-2 rounded-md">
-                  <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </Link>
+      {/* Our Services Button */}
+      <Link to="/services">
+        <button className="flex items-center gap-2 border border-blue-500 text-black px-6 py-3 rounded-xl font-medium hover:bg-blue-50 transition cursor-pointer">
+          <div className="bg-blue-500 p-1.5 rounded-md">
+            <Package className="w-5 h-5 text-white" />
+          </div>
+          Our Services
+        </button>
+      </Link>
+    </div>
 
-            {/* Doctor Image */}
-            <img
-              src={doctorImage}
-              alt="Dentist Doctor"
-              className="w-[280px] sm:w-[340px] rounded-xl"
-            />
-
-            {/* Right Card - Services Page */}
-            <Link to="/services" className="w-72">
-              <div className="bg-white rounded-xl shadow-md px-6 py-4 text-left w-full flex items-center justify-between hover:shadow-lg transition">
-                <div>
-                  <h4 className="font-semibold text-gray-900">Patient Comfort</h4>
-                  <p className="text-sm text-gray-500">Painless Treatments</p>
-                </div>
-                <div className="bg-blue-500 text-white p-2 rounded-md">
-                  <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </Link>
+    {/* Main Content Row (Cards + Doctor Image) */}
+    <div className="hidden sm:flex relative flex-col md:flex-row items-center justify-center gap-6">
+      {/* Left Card - Contact Page */}
+      <Link to="/contact" className="w-72">
+        <div className="bg-white rounded-xl shadow-md px-6 py-4 text-left w-full flex items-center justify-between hover:shadow-lg transition">
+          <div>
+            <h4 className="font-semibold text-gray-900">Book Appointment</h4>
+            <p className="text-sm text-gray-500">Ready for a Healthier Smile?</p>
+          </div>
+          <div className="bg-blue-500 text-white p-2 rounded-md">
+            <ArrowRight className="w-4 h-4" />
           </div>
         </div>
-      </section>
+      </Link>
+
+      {/* Doctor Image */}
+      <img
+        src={doctorImage}
+        alt="Dentist Doctor"
+        className="w-[280px] sm:w-[340px] rounded-xl"
+      />
+
+      {/* Right Card - Services Page */}
+      <Link to="/services" className="w-72">
+        <div className="bg-white rounded-xl shadow-md px-6 py-4 text-left w-full flex items-center justify-between hover:shadow-lg transition">
+          <div>
+            <h4 className="font-semibold text-gray-900">Patient Comfort</h4>
+            <p className="text-sm text-gray-500">Painless Treatments</p>
+          </div>
+          <div className="bg-blue-500 text-white p-2 rounded-md">
+            <ArrowRight className="w-4 h-4" />
+          </div>
+        </div>
+      </Link>
+    </div>
+
+    {/* Doctor Image - Mobile Only */}
+    <div className="flex sm:hidden justify-center">
+      <img
+        src={doctorImage}
+        alt="Dentist Doctor"
+        className="w-[280px] rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+
 
       <section className="py-16 bg-white font-jakarta text-center">
         <div className="container">
@@ -209,64 +220,65 @@ const HeroSection = () => {
       </section>
 
       <section className="py-20 bg-white font-jakarta">
-        <div className="container">
-          <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
-            {/* Left Text Content */}
-            <div className="flex-1 text-left">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                Dedicated To Your <span className="text-blue-500">Smile</span>, <br />
-                Committed To Your <span className="text-blue-500">Care</span>
-              </h2>
-              <p className="text-gray-600 text-lg mb-6">
-                At Dentistry, we understand that your smile is a reflection of your overall well-being and confidence.
-                Our expert team of dental professionals is dedicated to providing top-quality, patient-centered care
-                in a comfortable and friendly environment.
-              </p>
+  <div className="container">
+    <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
+      {/* Left Text Content */}
+      <div className="flex-1 text-left">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+          Dedicated To Your <span className="text-blue-500">Smile</span>, <br />
+          Committed To Your <span className="text-blue-500">Care</span>
+        </h2>
+        <p className="text-gray-600 text-lg mb-6">
+          At Dentistry, we understand that your smile is a reflection of your overall well-being and confidence.
+          Our expert team of dental professionals is dedicated to providing top-quality, patient-centered care
+          in a comfortable and friendly environment.
+        </p>
 
-              <Link to="/about">
-                <button className="flex items-center gap-2 bg-blue-100 text-blue-600 px-5 py-3 rounded-xl font-medium hover:bg-blue-200 transition cursor-pointer">
-                  <ShieldCheck className="w-5 h-5" />
-                  About Us
-                </button>
-              </Link>
+        <Link to="/about">
+          <button className="flex items-center gap-2 bg-blue-100 text-blue-600 px-5 py-3 rounded-xl font-medium hover:bg-blue-200 transition cursor-pointer">
+            <ShieldCheck className="w-5 h-5" />
+            About Us
+          </button>
+        </Link>
 
-              {/* Feature Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
-                {/* Card 1 */}
-                <div className="flex items-start gap-4 bg-gray-50 p-5 rounded-xl shadow-sm hover:shadow-md transition">
-                  <div className="bg-blue-100 p-2 rounded-md">
-                    <ShieldCheck className="w-6 h-6 text-blue-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Insurance Support</h4>
-                    <p className="text-sm text-gray-600">Assistance with dental insurance and financing.</p>
-                  </div>
-                </div>
-
-                {/* Card 2 */}
-                <div className="flex items-start gap-4 bg-gray-50 p-5 rounded-xl shadow-sm hover:shadow-md transition">
-                  <div className="bg-blue-100 p-2 rounded-md">
-                    <UserCheck className="w-6 h-6 text-blue-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Experienced Dentists</h4>
-                    <p className="text-sm text-gray-600">Skilled professionals with years of expertise.</p>
-                  </div>
-                </div>
-              </div>
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+          {/* Card 1 */}
+          <div className="flex items-start gap-4 bg-gray-50 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+            <div className="bg-blue-100 p-2 rounded-md">
+              <ShieldCheck className="w-6 h-6 text-blue-500" />
             </div>
+            <div>
+              <h4 className="font-semibold text-gray-900">Insurance Support</h4>
+              <p className="text-sm text-gray-600">Assistance with dental insurance and financing.</p>
+            </div>
+          </div>
 
-            {/* Right Image */}
-            <div className="flex-1">
-              <img
-                src={aboutImage}
-                alt="Smiling dental team"
-                className="rounded-2xl shadow-lg w-full max-w-md mx-auto lg:mx-0 h-[450px] object-cover"
-              />
+          {/* Card 2 */}
+          <div className="flex items-start gap-4 bg-gray-50 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+            <div className="bg-blue-100 p-2 rounded-md">
+              <UserCheck className="w-6 h-6 text-blue-500" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900">Experienced Dentists</h4>
+              <p className="text-sm text-gray-600">Skilled professionals with years of expertise.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Right Image - Hidden on Mobile */}
+      <div className="flex-1 hidden sm:block">
+        <img
+          src={aboutImage}
+          alt="Smiling dental team"
+          className="rounded-2xl shadow-lg w-full max-w-md mx-auto lg:mx-0 h-[450px] object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <style>{`
         @keyframes scroll-left {
@@ -317,6 +329,13 @@ const HeroSection = () => {
             animation-duration: 40s;
           }
         }
+
+          @media (max-width: 640px) {
+    /* ⬆️ Increased scroll speed for mobile by reducing duration from 40s to 20s */
+    .animate-scroll {
+      animation-duration: 5;
+    }
+  }
       `}</style>
 
       <section className="bg-gradient-to-b from-gray-50 to-white py-16 font-jakarta overflow-hidden">

@@ -27,3 +27,91 @@
     padding-right: 2rem;
   }
 }
+
+@media (max-width: 767px) {
+  /* Images: make them fit, not overflow, and add margin */
+  img, .responsive-img {
+    max-width: 100%;
+    height: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Section padding and container */
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100vw;
+  }
+  section, .section {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Headings and text */
+  h1, .text-5xl, .text-4xl {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+  h2, .text-3xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+  h3, .text-2xl {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+  p, .text-lg, .text-base {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+  .font-bold {
+    font-weight: 600 !important;
+  }
+
+  /* Buttons */
+  button, .btn, .cta {
+    font-size: 1rem !important;
+    padding: 0.75rem 1.25rem !important;
+    border-radius: 0.75rem !important;
+  }
+
+  /* Grids and flex layouts */
+  .grid, .flex {
+    gap: 1rem !important;
+  }
+  .grid-cols-2, .sm\:grid-cols-2, .md\:grid-cols-2, .lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .flex-row, .md\:flex-row, .lg\:flex-row {
+    flex-direction: column !important;
+  }
+
+  /* Card and box spacing */
+  .rounded-xl, .rounded-2xl {
+    border-radius: 1rem !important;
+  }
+  .shadow-lg, .shadow-md, .shadow-sm {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08) !important;
+  }
+
+  /* Hide or shrink decorative/side images if needed */
+  .side-image, .decorative-img {
+    display: none !important;
+  }
+
+  /* FAQ dropdown: more breathing room */
+  .faq-dropdown {
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Prevent text overflow */
+  .truncate, .overflow-ellipsis {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+  }
+}
