@@ -13,6 +13,7 @@ import { FaWhatsapp, FaInstagram, FaLinkedin, FaTelegramPlane } from 'react-icon
 import doctorImage1 from '../assets/contact-doctor.jpg'; // Update the image path as needed
 import { PhoneCall } from 'lucide-react';
 
+import { Helmet } from 'react-helmet-async'; // ✅ Helmet for SEO
 
 
 const services = [
@@ -106,6 +107,20 @@ const HeroSection = () => {
 
   return (
     <>
+
+<Helmet>
+        <title>Expert Dental Care | Flossy Dentistry</title>
+        <meta name="description" content="Welcome to Flossy Dentistry — where beautiful smiles begin. We provide teeth whitening, dental implants, cosmetic dentistry and more." />
+        <meta name="keywords" content="dentist, dental clinic, teeth whitening, dental implants, pediatric dentist, cosmetic dentistry, flossy dental" />
+        <link rel="canonical" href="https://yourdomain.com/" />
+        <meta property="og:title" content="Expert Dental Care " />
+        <meta property="og:description" content="Discover award-winning dental treatments tailored to you. Book your appointment with Flossy today!" />
+        <meta property="og:image" content="https://yourdomain.com/assets/doctor.jpg" />
+        <meta property="og:url" content="https://yourdomain.com/" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
+
 <section className="bg-gray-50 py-16 text-center font-jakarta">
   <div className="container">
     {/* Heading */}

@@ -1,5 +1,5 @@
-// src/pages/AboutUs.jsx
 import React from "react";
+import { Helmet } from "react-helmet-async"; // ✅ SEO Helmet
 import { ShieldCheck, UserCheck, UserSquare } from "lucide-react";
 import { FaWhatsapp, FaInstagram, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import aboutImage from "../assets/about.jpg";
@@ -51,6 +51,24 @@ const doctors = [
 const AboutUs = () => {
   return (
     <>
+      {/* ✅ SEO Meta Tags */}
+      <Helmet>
+        <title>About Us | Flossy Dentistry</title>
+        <meta
+          name="description"
+          content="Learn more about Flossy Dentistry, our expert dental team, values, and commitment to providing exceptional oral healthcare with a smile."
+        />
+        <link rel="canonical" href="https://yourdomain.com/about" />
+        <meta property="og:title" content="About Us | Flossy Dentistry" />
+        <meta
+          property="og:description"
+          content="Meet our skilled dentists and explore how Flossy Dentistry brings expert care and compassion together for every patient."
+        />
+        <meta property="og:image" content="https://yourdomain.com/assets/about.jpg" />
+        <meta property="og:url" content="https://yourdomain.com/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="py-20 bg-white font-jakarta about-hero-section">
         <div className="container max-w-5xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
@@ -75,7 +93,7 @@ const AboutUs = () => {
           <div className="flex-1">
             <img
               src={aboutImage}
-              alt="Smiling dental team"
+              alt="Dental professionals providing patient care"
               className="rounded-2xl shadow-lg w-full max-w-md mx-auto lg:mx-0 h-[450px] object-cover about-hero-image"
             />
           </div>
@@ -91,11 +109,10 @@ const AboutUs = () => {
           <p className="text-gray-600 text-lg max-w-2xl">
             At Dentistry, our expert team combines advanced dental expertise with genuine care to deliver outstanding treatment outcomes.
           </p>
-  <button className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-xl font-medium hover:bg-blue-200 transition">
-    <UserSquare className="w-5 h-5" />
-    Our Doctors
-  </button>
-
+          <button className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-xl font-medium hover:bg-blue-200 transition">
+            <UserSquare className="w-5 h-5" />
+            Our Doctors
+          </button>
         </div>
 
         <div className="container max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 doctor-grid">
@@ -103,7 +120,7 @@ const AboutUs = () => {
             <div key={idx} className="relative group text-center overflow-hidden rounded-2xl shadow-md doctor-card">
               <img
                 src={doc.img}
-                alt={doc.name}
+                alt={`Portrait of ${doc.name} - ${doc.role}`}
                 className="w-full h-auto transform transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">

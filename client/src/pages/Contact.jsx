@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async'; // ✅ SEO Helmet
 import { Phone, Mail, Plus, Minus } from 'lucide-react';
 import doctorImage from '../assets/faq-doctor.jpg';
 import doctorImage1 from '../assets/Doctorcontact.jpg';
@@ -30,6 +31,18 @@ const ContactPage = () => {
 
   return (
     <div className="bg-white font-jakarta">
+      {/* ✅ SEO Meta Tags */}
+      <Helmet>
+        <title>Contact Us | Flossy Dentistry</title>
+        <meta name="description" content="Get in touch with Flossy Dentistry for appointments, inquiries, and expert dental care. We're here to help you smile brighter." />
+        <link rel="canonical" href="https://yourdomain.com/contact" />
+        <meta property="og:title" content="Contact Us | Flossy Dentistry" />
+        <meta property="og:description" content="Have questions? Reach out to our friendly dental team. We're here to help you smile better!" />
+        <meta property="og:image" content="https://yourdomain.com/assets/faq-doctor.jpg" />
+        <meta property="og:url" content="https://yourdomain.com/contact" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       {/* Section Heading */}
       <section className="py-16">
         <div className="container max-w-4xl mx-auto text-left mb-12">
@@ -37,6 +50,22 @@ const ContactPage = () => {
           <p className="text-gray-600 text-lg max-w-2xl">
             Have questions or want to book an appointment? Reach out to our friendly team—we're here to help!
           </p>
+        </div>
+
+        {/* Map Preview */}
+        <div className="container max-w-4xl mx-auto mb-12">
+          <div className="w-full rounded-2xl overflow-hidden shadow-lg" style={{ height: '350px' }}>
+            <iframe
+              title="Location Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.953735315904!3d-37.8162797420217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f7fd81%3A0xf577c8b1a0e8e8e8!2sDentist!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
 
         {/* Contact Section */}
@@ -82,11 +111,11 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* Right Side Image (only visible on md and above) */}
+          {/* Right Side Image */}
           <div className="hidden md:flex justify-center pr-5 md:pr-10 mt-8 md:mt-0">
             <img
               src={doctorImage1}
-              alt="Doctor with patient"
+              alt="Smiling dentist ready to assist patients"
               className="rounded-2xl w-full max-w-md object-cover"
               style={{ maxHeight: '450px' }}
             />
@@ -101,7 +130,7 @@ const ContactPage = () => {
           <div className="flex justify-center">
             <img
               src={doctorImage}
-              alt="Doctor with patient"
+              alt="Dentist consulting a patient about dental care"
               className="w-full max-w-md rounded-xl shadow-md mx-auto"
             />
           </div>
